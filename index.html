@@ -39,9 +39,8 @@ function init() {
 	THREE.MultiplyBlending
 	THREE.CustomBlending
   */
-  //	var material1 = createTexturedMaterial(texture1, THREE.AdditiveBlending); // 加算合成
-  var material1 = createTexturedMaterial(texture1, THREE.NormalBlending); // 乗算合成
-  var material2 = createTexturedMaterial(texture2, THREE.NoBlending); // 乗算合成
+  var material1 = createTexturedMaterial(texture1, THREE.NormalBlending); // 通常のアルファ合成
+  var material2 = createTexturedMaterial(texture2, THREE.NoBlending); // 合成無し
 
   // 手前に半透明の板を置く
   var geometry1 = new THREE.PlaneGeometry(1, 1, 10, 10); // 分割数が極端に小さいとperspective correctionが効かないのでテクスチャが割れるので10, 10にしておく
